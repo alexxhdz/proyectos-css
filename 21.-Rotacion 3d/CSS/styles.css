@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+body section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  width: 100%;
+  flex-wrap: wrap;
+}
+body section .card {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin: 20px;
+  transform-style: preserve-3d;
+  border-radius: 15px;
+  overflow: hidden;
+}
+body section .card .box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 1s ease-in-out;
+}
+body section .card:hover .box {
+  transform: rotateY(180deg);
+}
+body section .card .imgBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+body section .card .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body section .card .contentBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+body section .card .contentBox div {
+  transform-style: preserve-3d;
+  transform: translateZ(100px);
+  background: linear-gradient(45deg, #fe0061, #FFE838);
+  padding: 20px;
+  margin: 0 30px;
+  border-radius: 15px;
+}
+body section .card .contentBox div h2 {
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: 1px;
+  backface-visibility: hidden;
+}
+body section .card .contentBox div p {
+  font-size: 16px;
+  color: #fff;
+  backface-visibility: hidden;
+  letter-spacing: 1px;
+  line-height: 20px;
+}/*# sourceMappingURL=styles.css.map */
