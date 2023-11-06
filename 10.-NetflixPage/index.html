@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/SCSS/styles.css" />
+
+    <title>Netflix Page</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <a class="logo" href=""><img src="/IMG/logo.png" alt="" /></a>
+        <nav>
+          <a href="">Home</a>
+          <a href="">TV Shows</a>
+          <a href="">Movies</a>
+          <a href="">Latest</a>
+          <a href="">My List</a>
+        </nav>
+        <div class="search">
+          <input type="text" placeholder="Search" />
+          <button class="btnBuscar">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+        </div>
+      </header>
+      <section class="banner">
+        <img class="bg" src="/IMG/tms.jpg" alt="" />
+        <span class="sombra"></span>
+        <div class="content">
+          <img class="tituloSerie" src="/IMG/logoletras.png" alt="Logo Serie" />
+          <h4>
+            <span>2022</span>
+            <span><i>16+</i></span>
+            <span>6 Temporadas</span>
+            <span>Serie</span>
+          </h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+            quasi veritatis dolorum molestiae suscipit adipisci. Culpa rem,
+            recusandae vel saepe consequuntur iusto dolore modi eveniet,
+            adipisci illum totam consectetur? Ullam!
+          </p>
+          <div class="buttons">
+            <a href="#">Play</a>
+            <a href="#">My List</a>
+          </div>
+        </div>
+        <a onclick="toggleVideo();" class="play"
+          ><img src="/IMG/play.png" alt="Boton de play" />Watch Trailer</a
+        >
+      </section>
+      <section class="trailer">
+        <video controls="true" src="/IMG/trailer.mp4"></video>
+        <img
+          onclick="toggleVideo();"
+          class="close"
+          src="/IMG/close.png"
+          alt="Close"
+        />
+      </section>
+    </main>
+    <script>
+      function toggleVideo() {
+        const trailer = document.querySelector(".trailer");
+        const video = document.querySelector("video");
+        trailer.classList.toggle("active");
+        video.currentTime = 0;
+        video.pause();
+      }
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

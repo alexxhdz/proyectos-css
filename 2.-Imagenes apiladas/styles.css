@@ -1,0 +1,86 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient(#766df4,#4942ad);
+}
+
+.img-contenedor{
+    /*Contenedor de las imagenes*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+} 
+
+.img-contenedor .imagen{
+    position: relative;
+    /*Van apilados con este valor negativo*/
+    margin-right: -40px;
+    /**/
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.img-contenedor .imagen img{
+    width: 150px;
+    height: 150px;
+    /*Complemento de las animaciones*/
+    transition: transform 0.3s ease-in-out;
+}
+
+.img-contenedor .imagen .nombre{
+    /*Absolute, hace que se pueda mover a donde sea*/
+    position: absolute;
+    background-color: black;
+    border-radius: 10px;
+    color: aliceblue;
+    display: none;
+    min-width: 100px;
+    width: 100px;
+    top: -40px;
+    padding: 10px;
+    left: 10%;
+    text-align: center;
+}
+
+.img-contenedor .imagen:hover .nombre{
+    display: inline-block;
+    transform: translateY(-20px);
+}
+
+.img-contenedor .imagen .nombre .txt{
+    display: inline-block;
+    /*Pone tres puntos cuando no cabe*/
+    text-overflow: ellipsis;
+    /*Oculta lo que ya no cabe de texto 
+    dependiendo del ancho width*/
+    overflow: hidden;
+    /*Hace que no se haga el salto de linea*/
+    white-space: nowrap;
+    margin: 0 auto;
+    width: 150px;
+    box-sizing: border-box;
+}
+
+
+
+/*Pseudo elementos*/
+/*.img-contenedor .imagen .nombre .nombre::before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    left: 40%;
+    bottom: -20px;
+    border-top: 10px solid black;
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+    border-bottom: 10px solid black;
+    background-color: rgb(0, 0, 0);
+}*/
+/*Repasar*/
+
+
+/*Animaciones*/
+.img-contenedor .imagen:hover img{
+    transform: translateY(-10px);
+}

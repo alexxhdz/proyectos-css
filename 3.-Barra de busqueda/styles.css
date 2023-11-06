@@ -1,0 +1,90 @@
+.searchbar{
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 10px;
+    margin: 100px auto;
+}
+
+
+.searchbar:focus-within{
+    border: 1px solid rgb(36, 36, 36);
+    box-shadow: 2px 2px 2px 2px rgba(72, 72, 72,0.2);
+}
+
+.searchbar input{
+    border: none;
+    outline: none;
+    padding: 10px;
+    flex: auto;
+}
+
+.searchbar .actions{
+    display: flex;
+    gap: 10px;
+}
+
+.searchbar .actions button{
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+.searchbar .actions button:hover{
+    color: blueviolet;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }

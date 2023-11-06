@@ -1,0 +1,88 @@
+body{
+    background-color: blue;
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedor{
+    background-color: rgb(72, 90, 224);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+.contenedor .caja{
+    font-weight: bolder;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
+}
+
+.contenedor .caja .top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+}
+
+.contenedor .caja .logo img{
+    width: 100px;
+    height: 50px;
+}
+
+.contenedor .caja .top .txt{
+    text-align: start;
+    color: black;
+}
+
+.contenedor .caja .botones{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    width: 100%;
+    gap: 10px;
+    font-weight: bolder;
+}
+
+.contenedor .caja .botones button{
+    background-color: white;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-weight: bolder;
+}
+
+.contenedor .caja .botones .ver{
+    background-color: rgb(72, 90, 224);
+    color: white;
+}
+
+.contenedor .caja .botones .ver:hover{
+    background-color: rgb(23, 43, 195);
+    color: rgb(255, 255, 255);
+}
+
+.contenedor .caja .botones .volver:hover{
+    background-color: rgb(229, 229, 229);
+    color: rgb(0, 0, 0);
+}
+
+@media (max-width: 600px){
+    .contenedor .caja .botones{
+        flex-direction: column;
+    }
+}

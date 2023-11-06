@@ -1,0 +1,182 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #434343;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .container {
+  position: relative;
+}
+body .container .card {
+  background-color: #ffffff;
+  width: 320px;
+  height: 450px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+body .container .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  -webkit-clip-path: circle(150px at 80% 20%);
+          clip-path: circle(150px at 80% 20%);
+  transition: 0.5s ease-in-out;
+}
+body .container .card:hover .imgBox {
+  top: 0;
+  transform: translateY(0);
+}
+body .container .card:hover .contentBox {
+  height: 210px;
+}
+body .container .card:hover .contentBox .size {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+body .container .card:hover .contentBox .color {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.6s;
+}
+body .container .card:hover .contentBox a {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.75s;
+}
+body .container .card:hover::before {
+  -webkit-clip-path: circle(300px at 80% -20%);
+          clip-path: circle(300px at 80% -20%);
+}
+body .container .card::after {
+  content: "ADIDAS";
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-size: 12em;
+  color: #545455;
+  font-weight: 800;
+  font-style: italic;
+}
+body .container .card .imgBox {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 220px;
+  z-index: 2000;
+  transition: 0.5s;
+  transform: translateY(-50%);
+}
+body .container .card .imgBox img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 240px;
+  transform: translate(-50%, -50%) rotate(-10deg);
+  z-index: 2000;
+}
+body .container .card .contentBox {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #000000;
+  height: 100px;
+  text-align: center;
+  transition: 1s;
+  z-index: 10;
+}
+body .container .card .contentBox h2 {
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  padding: 10px;
+}
+body .container .card .contentBox .size, body .container .card .contentBox .color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  opacity: 1;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+body .container .card .contentBox .size h3, body .container .card .contentBox .size h3, body .container .card .contentBox .color h3, body .container .card .contentBox .color h3 {
+  color: #fff;
+  font-weight: 300px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+body .container .card .contentBox .size span {
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  line-height: 24px;
+  font-size: 14px;
+  display: inline-block;
+  color: black;
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 0 5px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+body .container .card .contentBox .size span:hover {
+  color: black;
+  background-color: #000000;
+  color: #ffffff;
+}
+body .container .card .contentBox .color span {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+body .container .card .contentBox .color span:nth-child(2) {
+  background-color: #00ffff;
+}
+body .container .card .contentBox .color span:nth-child(3) {
+  background-color: #09ff00;
+}
+body .container .card .contentBox .color span:nth-child(4) {
+  background-color: #ff00bf;
+}
+body .container .card .contentBox .color span:hover {
+  border: 2px solid white;
+}
+body .container .card .contentBox a {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
+  transform: translateY(50px);
+  transition: 0.5s;
+  opacity: 0;
+}
+body .container .card .contentBox a:hover {
+  background-color: #000000 !important;
+  color: #ffffff;
+  transition: 0s ease-in-out;
+}/*# sourceMappingURL=styles.css.map */
